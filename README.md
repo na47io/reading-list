@@ -10,10 +10,10 @@ vibecoded ass [reading list](https://reading-list-bmiwd.sprites.app/) to help me
 
 ## deploy
 
-run this 
+Deploys automatically on commit via post-commit hook.
+
+Manual deploy (uses local file):
 
 ```bash
-sprite exec -- wget -O /home/sprite/public/index.html https://raw.githubusercontent.com/na47io/reading-list/main/reading-list.html
+cat reading-list.html | sprite exec -- sh -c 'cat > /home/sprite/public/index.html'
 ```
-
-or make a git hook to run it for you
